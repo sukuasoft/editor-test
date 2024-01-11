@@ -131,7 +131,7 @@ export default function Home() {
                         className="bg-green-500 text-sm text-white px-5 py-2 rounded-md hover:bg-green-600 transition"
                         disabled={compiling}
                     >
-                        {compiling ? "Compiling..." : "Submit"}
+                        {compiling ? "Compilando..." : "Compilar"}
                     </button>
                 </div>
                 <div className="xl:flex">

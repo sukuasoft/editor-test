@@ -1,0 +1,8 @@
+Ace, codemirror - text editors
+
+compiler = compilex, hackerearth-api, hackerrank-api
+
+
+semi final thoughts: Ace for editor, and Hackerearth-API for code compilation and execution
+
+semi final thought complete

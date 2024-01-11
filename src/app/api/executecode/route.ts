@@ -100,7 +100,7 @@ export async function POST(request: Request) {
         
         const requestHeaders: HeadersInit = new Headers();
         requestHeaders.set('Content-Type', 'application/json');
-        requestHeaders.set('client-secret', process.env.CLIENT_SECRET_KEY!)
+        requestHeaders.set('client-secret', 'e8daefb8f779919d0ce8f1228edf1bd83cd5f223')
 
         const response = await fetch(url, {
             method: "POST",

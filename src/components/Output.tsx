@@ -33,8 +33,8 @@ const Output: React.FC<InputProps> = ({ result }) => {
         <div>
             <div className="flex w-full justify-between px-2">
                 <span>{`Status: '${result.run_status.status}'`}</span>
-                <span>Time: {result.run_status.time_used}</span>
-                <span>Memory: {result.run_status.memory_used}</span>
+                <span>Tempo: {result.run_status.time_used}</span>
+                <span>Memória: {result.run_status.memory_used}</span>
             </div>
             <div>
                 <textarea

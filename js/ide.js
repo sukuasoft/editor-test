@@ -1,13 +1,13 @@
-const API_KEY = "7a77b090-b0a9-11ee-800a-e9c08ee029c3"; // Get yours for free at https://judge0.com/ce and https://judge0.com/extra-ce
+const API_KEY = "9d33715652msha31f124cb292d70p120a20jsn13f11eaa9b04"; // Get yours for free at https://judge0.com/ce and https://judge0.com/extra-ce
 
 const AUTH_HEADERS = API_KEY ? {
     "X-RapidAPI-Key": API_KEY
 } : {};
 
-var defaultUrl = localStorageGetItem("api-url") || "https://judge0-ce.p.rapidapi.com";
+var defaultUrl = localStorageGetItem("api-url") || "https://online-compiler-arotec.p.rapidapi.com";
 var extraApiUrl = "https://judge0-extra-ce.p.rapidapi.com";
 
-if (location.hostname == "ide.judge0.com") {
+if (location.hostname == "online-compiler-arotec.p.rapidapi.com") {
     defaultUrl = "https://ce.judge0.com";
     extraApiUrl = "https://extra-ce.judge0.com";
 }

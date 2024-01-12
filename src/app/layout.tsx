@@ -6,7 +6,7 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'OCEC',
+title: 'ARO - CODE By AROTEC',
   description: 'An Online Code Editor and Compiler',
 }
 
@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="PT">
       <body className={inter.className}>
         <Header />
         {children}

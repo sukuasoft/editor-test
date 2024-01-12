@@ -83,13 +83,13 @@ export default function Home() {
             <div className="md:flex w-full h-full m-auto border-0 border-black justify-center">
                 <div className="w-full  lg:max-w-4xl xl:max-w-5xl xl:mx-5 sm:p-2 border-0 border-black bg-[#dedede]">
                     <div className="sm:flex">
-                        <div className="sm:w-1/4 border-0 border-pink-600">
+                        <div className="sm:w-1/4 md:py-0 md:px-0 px-2 pt-2 pb-1 border-0 border-pink-600">
                             <LangChoose
                                 value={language}
                                 onChange={(language: any) => setLanguage(language)}
                             />
                         </div>
-                        <div className="sm:w-1/4 border-0 border-pink-600">
+                        <div className="sm:w-1/4 border-0 md:pl-3 md:py-0 md:px-0 px-2  py-1 border-pink-600">
                             <ThemeChoose
                                 value={chosenTheme}
                                 onChange={(chosenTheme: any) => setChosenTheme(chosenTheme)}

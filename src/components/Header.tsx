@@ -10,7 +10,7 @@ const Header = () => {
 
             <a className="font-inter font-medium bg-[#000000] text-white text-sm px-6 py-3 rounded-md" target="_blank" href="https://github.com/SacredDoggo/online-code-editor-compiler" rel="noopener noreferrer">
                 {/* <FaGithub /> */}
-                Github
+                Nome do usuario
             </a>
         </header>
     )

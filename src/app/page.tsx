@@ -78,75 +78,88 @@ export default function Home() {
     };
 
     return (
-        <div className="flex w-full h-full m-auto border-0 border-black justify-center">
-            <div className="w-full lg:max-w-4xl xl:max-w-5xl mx-5 p-2 border-0 border-black bg-[#dedede]">
-                <div className="sm:flex">
-                    <div className="sm:w-1/4 border-0 border-pink-600">
-                        <LangChoose
-                            value={language}
-                            onChange={(language: any) => setLanguage(language)}
-                        />
-                    </div>
-                    <div className="sm:w-1/4 border-0 border-pink-600">
-                        <ThemeChoose
-                            value={chosenTheme}
-                            onChange={(chosenTheme: any) => setChosenTheme(chosenTheme)}
-                        />
-                    </div>
-                    <div className="flex w-1/2 justify-end">
-                        <div className="mx-10 border-0 my-auto border-green-600">
-                            <DownloadCode
-                                code={code}
-                                lang_extension={lang_model[language[0].label].extension}
-                            />
+        <>
 
+            <div className="flex w-full h-full m-auto border-0 border-black justify-center">
+                <div className="w-full  lg:max-w-4xl xl:max-w-5xl mx-5 p-2 border-0 border-black bg-[#dedede]">
+                    <div className="sm:flex">
+                        <div className="sm:w-1/4 border-0 border-pink-600">
+                            <LangChoose
+                                value={language}
+                                onChange={(language: any) => setLanguage(language)}
+                            />
+                        </div>
+                        <div className="sm:w-1/4 border-0 border-pink-600">
+                            <ThemeChoose
+                                value={chosenTheme}
+                                onChange={(chosenTheme: any) => setChosenTheme(chosenTheme)}
+                            />
+                        </div>
+                        <div className="flex w-1/2 justify-end">
+                            <div className="mx-10 flex border-0 my-auto border-green-600">
+                                <button
+                                    type="button"
+                                    onClick={onSubmit}
+                                    className="bg-green-500  text-sm text-white px-5 mr-2 py-2 mb-2 rounded-md hover:bg-green-600 transition"
+                                    disabled={compiling}
+                                >
+                                    {compiling ? "Compilando..." : "Compilar"}
+                                </button>
+                                <div className="py-2">
+                                    <DownloadCode
+                                        code={code}
+                                        lang_extension={lang_model[language[0].label].extension}
+                                    />
+                                </div>
+
+                            </div>
                         </div>
                     </div>
+                    <div className="w-full">
+                        <Editor
+                            mode={mode}
+                            theme={theme}
+                            onChange={(e: any) => {
+                                setCode(e);
+                            }}
+                            fontSize={fontSize}
+                            showPrintMargin={showPrintMargin}
+                            showGutter={showGutter}
+                            highlightActiveLine={highlightActiveLine}
+                            value={code}
+                            setOptions={{
+                                enableBasicAutocompletion: options.enableBasicAutocompletion,
+                                enableLiveAutocompletion: options.enableLiveAutocompletion,
+                                enableSnippets: options.enableSnippets,
+                                showLineNumbers: options.showLineNumbers,
+                                tabSize: options.tabSize,
+                            }}
+                        />
+                    </div>
                 </div>
-                <div className="w-full">
-                    <Editor
-                        mode={mode}
-                        theme={theme}
-                        onChange={(e: any) => {
-                            setCode(e);
-                        }}
-                        fontSize={fontSize}
-                        showPrintMargin={showPrintMargin}
-                        showGutter={showGutter}
-                        highlightActiveLine={highlightActiveLine}
-                        value={code}
-                        setOptions={{
-                            enableBasicAutocompletion: options.enableBasicAutocompletion,
-                            enableLiveAutocompletion: options.enableLiveAutocompletion,
-                            enableSnippets: options.enableSnippets,
-                            showLineNumbers: options.showLineNumbers,
-                            tabSize: options.tabSize,
-                        }}
-                    />
-                </div>
-                <div className="border-0 border-blue-600 text-right px-10 py-2">
-                    <button
-                        type="button"
-                        onClick={onSubmit}
-                        className="bg-green-500 text-sm text-white px-5 py-2 rounded-md hover:bg-green-600 transition"
-                        disabled={compiling}
-                    >
-                        {compiling ? "Compilando..." : "Compilar"}
-                    </button>
-                </div>
-                <div className="xl:flex">
-                    <div className="border-0 border-blue-600 py-2 xl:mr-1 w-full xl:w-1/2">
+
+                <div className="border-black w-1/2 bg-[#dedede]">
+                    <div className="border-0 border-blue-600 px-3 py-2 ">
                         <span className="text-slate-800">Input: </span>
                         <Input
                             value={input}
                             onChange={(e: any) => setInput(e.target.value)}
                         />
                     </div>
-                    <div className="border-0 border-blue-600 py-2 xl:ml-1 w-full xl:w-1/2">
+                    <div className="border-0 border-blue-600 py-2  px-3 w-full ">
                         <Output result={output} />
                     </div>
                 </div>
+
             </div>
-        </div>
+
+            <div className="pt-5">
+                <center className="mt-5 text-slate-700">
+                    <span className="text-xs">
+                        &copy; 2024 - AROTEC SU &middot; ARO-CODE
+                    </span>
+                </center>
+            </div>
+        </>
     );
 }

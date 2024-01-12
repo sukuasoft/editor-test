@@ -80,8 +80,8 @@ export default function Home() {
     return (
         <>
 
-            <div className="flex w-full h-full m-auto border-0 border-black justify-center">
-                <div className="w-full  lg:max-w-4xl xl:max-w-5xl mx-5 p-2 border-0 border-black bg-[#dedede]">
+            <div className="md:flex w-full h-full m-auto border-0 border-black justify-center">
+                <div className="w-full  lg:max-w-4xl xl:max-w-5xl xl:mx-5 sm:p-2 border-0 border-black bg-[#dedede]">
                     <div className="sm:flex">
                         <div className="sm:w-1/4 border-0 border-pink-600">
                             <LangChoose
@@ -95,12 +95,12 @@ export default function Home() {
                                 onChange={(chosenTheme: any) => setChosenTheme(chosenTheme)}
                             />
                         </div>
-                        <div className="flex w-1/2 justify-end">
-                            <div className="mx-10 flex border-0 my-auto border-green-600">
+                        <div className="flex w-full md:w-1/2 justify-start  md:justify-end">
+                            <div className="md:mx-10 mx-2 pt-2 sm:pt-0 flex border-0 border-green-600">
                                 <button
                                     type="button"
                                     onClick={onSubmit}
-                                    className="bg-green-500  text-sm text-white px-5 mr-2 py-2 mb-2 rounded-md hover:bg-green-600 transition"
+                                    className="bg-green-500  text-sm text-white px-5 mr-2 py-1 h-9 mx-auto rounded-md hover:bg-green-600 transition"
                                     disabled={compiling}
                                 >
                                     {compiling ? "Compilando..." : "Compilar"}
@@ -138,7 +138,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="border-black w-1/2 bg-[#dedede]">
+                <div className="border-black md:w-1/2 bg-[#dedede]">
                     <div className="border-0 border-blue-600 px-3 py-2 ">
                         <span className="text-slate-800">Input: </span>
                         <Input

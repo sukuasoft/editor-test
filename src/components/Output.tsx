@@ -38,7 +38,7 @@ const Output: React.FC<InputProps> = ({ result }) => {
             </div>
             <div>
                 <textarea
-                    className={`w-full resize-none rounded-sm text-sm py-0.5 ${someCompileError || someRuntimeError
+                    className={`w-full border-none outline-none  resize-none rounded-sm text-sm py-0.5 ${someCompileError || someRuntimeError
                         ? "bg-red-200 text-red-500"
                         : ""
                         }`}

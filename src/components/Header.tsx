@@ -10,7 +10,7 @@ const Header = () => {
 
             <a className="font-inter font-medium bg-[#000000] text-white text-sm px-6 py-3 rounded-md"  >
                 {/* <FaGithub /> */}
-                Nome do usuario
+                João A. Katumbela
             </a>
         </header>
     )

@@ -9,7 +9,7 @@ interface InputProps {
 const DownloadCode : React.FC<InputProps> = ({ code, lang_extension }) => {
     
     return (
-        <button type="button" onClick={() => filesaver(code, lang_extension)} className="outline-none bg-transparent border-none">
+        <button title="Baixar código" type="button" onClick={() => filesaver(code, lang_extension)} className="outline-none bg-transparent border-none">
             <img src={download.src} alt="download" className="w-6 h-6 object-contain" />
           </button>
     );

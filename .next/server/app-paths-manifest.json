@@ -1,3 +1,4 @@
 {
+  "/api/executecode/route": "app/api/executecode/route.js",
   "/page": "app/page.js"
 }
